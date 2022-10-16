@@ -22,20 +22,35 @@
 
 
 
-//numero invariato da aggiungere
-const numeroInvariato = 21;
+// //numero invariato da aggiungere
+// const numeroInvariato = 21;
 
-//chiedere all'utente nome,cognome e colore preferito
+// //chiedere all'utente nome,cognome e colore preferito
 
-const nomeUtente = prompt("Come ti chiami?");
-const cognomeUtente = prompt("Quale è il tuo cognome?");
-const colorePreferito = prompt("Ed il tuo colore preferito?");
-console.log(nomeUtente, cognomeUtente, colorePreferito);
+// const nomeUtente = prompt("Come ti chiami?");
+// const cognomeUtente = prompt("Quale è il tuo cognome?");
+// const colorePreferito = prompt("Ed il tuo colore preferito?");
+// console.log(nomeUtente, cognomeUtente, colorePreferito);
 
-//generare password seguita dal numero 21
-const password = nomeUtente + cognomeUtente + colorePreferito + numeroInvariato
+// //generare password seguita dal numero 21
+// const password = nomeUtente + cognomeUtente + colorePreferito + numeroInvariato
 
-//prendere contenuto dall'html h3
-let html = document.getElementById("passgen").innerHTML
+// //prendere contenuto dall'html h3
+// let html = document.getElementById("passgen").innerHTML
 
-document.getElementById("passgen").innerHTML = "La tua password è" + ` ${password}`;
+// document.getElementById("passgen").innerHTML = "La tua password è" + ` ${password}`;
+
+
+const nome = prompt("Dimmi il tuo nome");
+const cognome = prompt ("Dimmi il tuo cognome")
+const colore = prompt ("Dimmi il tuo colore preferito")
+console.log(nome, cognome, colore);
+
+const numero = 21
+console.log(numero, typeof(numero));
+
+const password = nome + cognome + colore + numero;
+console.log(password);
+
+document.getElementById("passgen").innerHTML = "La tua password è" + ` ${password}`
+console.log();
