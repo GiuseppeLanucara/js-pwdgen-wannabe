@@ -38,4 +38,4 @@ const password = nomeUtente + cognomeUtente + colorePreferito + numeroInvariato
 //prendere contenuto dall'html h3
 let html = document.getElementById("passgen").innerHTML
 
-document.getElementById("passgen").innerHTML = html + `${password}`;
+document.getElementById("passgen").innerHTML = "La tua password è" + ` ${password}`;
