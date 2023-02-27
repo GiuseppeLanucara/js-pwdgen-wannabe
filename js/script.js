@@ -40,17 +40,20 @@
 
 // document.getElementById("passgen").innerHTML = "La tua password è" + ` ${password}`;
 
+let nome = prompt("Scrivi il tuo nome qui!")
+let cognome = prompt("Scrivi il tuo cognome qui!")
+let colorePreferito = prompt("Scrivi il tuo colore preferito qui!")
 
-const nome = prompt("Dimmi il tuo nome");
-const cognome = prompt ("Dimmi il tuo cognome")
-const colore = prompt ("Dimmi il tuo colore preferito")
-console.log(nome, cognome, colore);
+// controlla se l'input dell'utente è una stringa e contiene solo lettere
+while (!/^[a-zA-Z]+$/.test(nome) || !/^[a-zA-Z]+$/.test(cognome) || !/^[a-zA-Z]+$/.test(colorePreferito)) {
+    alert("Errore: inserisci solo lettere come nome, cognome e colore preferito.");
+    nome = prompt("Scrivi il tuo nome qui!")
+    cognome = prompt("Scrivi il tuo cognome qui!")
+    colorePreferito = prompt("Scrivi il tuo colore preferito qui!")
+}
 
-const numero = 21
-console.log(numero, typeof(numero));
+// se l'input è corretto, genera la password
+let pass = nome + cognome + colorePreferito
+const numb = 21
+document.getElementById("passgen").innerHTML = `${pass}${numb}`;
 
-const password = nome + cognome + colore + numero;
-console.log(password);
-
-document.getElementById("passgen").innerHTML = "La tua password è" + ` ${password}`
-console.log();
